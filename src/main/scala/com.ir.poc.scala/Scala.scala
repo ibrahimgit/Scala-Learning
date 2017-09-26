@@ -45,6 +45,13 @@ object Scala {
     poc.doStuff(3, "Rashid")
     printme
 
+    var nno = new Shahina("dsasa")
+    //nno.doSomething()
+    nno.doNothing()
+
+    var no = new Nobo("fdsfds")
+    no.doSomething()
+
     println("Factoral of " + value + " is " + factorial(value))
 
     println(addTwoValues(value, value2))
@@ -72,7 +79,45 @@ object Scala {
     list3 = list2.::(list0)
     for(item <- list3)
       println(item)
+
+
+    println(f1("Saba"))
+    println(range(5))
+    println(double(5))
+    println(area(5))
+    println(testingCase("Saba"))
+    testhigherorderfunction(double, 5)
+    testhigherorderfunction1(addTwoValues, 5, 10)
+
+    var emp1 = new Employee("Saba", 27)
+    var emp2 = new Employee("Rashid", 31)
+
+    val empList = List(emp1, emp2);
+
+    println(empList.size + " " + empList)
+
+    empList.+:(new Employee("Ibrahim", 31))
+
+    println(empList.size + " " + empList)
+
   }
+
+  def testhigherorderfunction1(f: (Int, Int) => Int, value1 :Int,  value2 :Int) = {
+
+    f(value1, value2)
+  }
+
+  def testhigherorderfunction(f: Int => Int, value :Int) = {
+    f(value)
+  }
+
+  def double(x :Int) = x*x
+
+  def area(radius :Int) = 3.14*double(radius)
+
+  def f1(str :String) :String = s"Hello $str"
+
+  def range(intt :Int)  = 1.to(intt)
 
   def callByName(v: => Int) :Unit = {
     println("Call by name function")
@@ -107,6 +152,14 @@ object Scala {
   def printme {
     println("Print me")
 
+  }
+
+  def testingCase(text : String)  :String = {
+    text match {
+        case "Saba" => "Love"
+        case "Nobo" => "Forget"
+        case "Shahina" => "Memory"
+    }
   }
 
 

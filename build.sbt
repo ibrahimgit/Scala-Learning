@@ -1,4 +1,4 @@
-name := "POC"
+name := "Scala-Learning"
 
 version := "0.1"
 

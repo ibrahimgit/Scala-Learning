@@ -1,5 +1,7 @@
 package com.ir.poc.scala
 
+import com.ir.poc.testt.Test
+
 import Array._
 object Scala {
 
@@ -89,17 +91,44 @@ object Scala {
     testhigherorderfunction(double, 5)
     testhigherorderfunction1(addTwoValues, 5, 10)
 
+    val fn = (x:Int) => x + 1
+    println(fn(10))
+    println(fn.apply(100))
+
+
     var emp1 = new Employee("Saba", 27)
     var emp2 = new Employee("Rashid", 31)
 
     val empList = List(emp1, emp2);
 
-    println(empList.size + " " + empList)
+    println(empList.size + " " + empList.toString())
 
     empList.+:(new Employee("Ibrahim", 31))
 
-    println(empList.size + " " + empList)
+    println(empList.size + " " + empList.toString())
+    listformap
 
+    val c1 = new CaseClass("Saba", 25, true)
+
+    val tst = new Test("fdsd", 12);
+
+    println(tst.strr)
+    println(tst.aa())
+
+
+  }
+
+  case class CaseClass (fName: String, age: Int, iTProfessional :Boolean)
+  def listformap(): Unit = {
+    val listt = List(1, 2, 3, 4);
+
+    val list1 = listt.map(x => x + 1 )
+
+    for(l <- listt) yield l +5
+
+
+    println(listt.toString())
+    println(list1.toString())
   }
 
   def testhigherorderfunction1(f: (Int, Int) => Int, value1 :Int,  value2 :Int) = {

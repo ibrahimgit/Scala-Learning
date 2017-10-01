@@ -3,7 +3,7 @@ package com.ir.poc.akka
 import java.util.Calendar
 
 import akka.actor.{ActorSystem, Props}
-
+import akka.pattern._
 object AkkaTest extends App {
 
   //override def main(args: Array[String]): Unit = {

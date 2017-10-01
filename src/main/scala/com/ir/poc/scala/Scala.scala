@@ -2,7 +2,7 @@ package com.ir.poc.scala
 
 import com.ir.poc.testt.Test
 
-import Array._
+import scala.Array._
 object Scala {
 
 
@@ -114,9 +114,20 @@ object Scala {
 
     println(tst.strr)
     println(tst.aa())
+    test();
+
+  }
+
+  def test(): Unit = {
+    var str :String = "dadsd"
+    str.map( s => println(s"Hello $s"))
+
+    var intt :Int = 5
+
 
 
   }
+
 
   case class CaseClass (fName: String, age: Int, iTProfessional :Boolean)
   def listformap(): Unit = {
@@ -124,7 +135,7 @@ object Scala {
 
     val list1 = listt.map(x => x + 1 )
 
-    for(l <- listt) yield l +5
+    for(l <- listt) yield println(l+5)
 
 
     println(listt.toString())

@@ -10,7 +10,7 @@ import akka.http.scaladsl.Http
 import akka.pattern._
 import akka.http.scaladsl.server.Directives._
 import akka.util.Timeout
-import com.ir.poc.akka.{HelloActor, Rash1}
+import com.ir.poc.akka.{HelloActor, IRashid, Rash1, Rash3}
 
 object Ibbu extends JsonSupport {
 
@@ -21,6 +21,7 @@ object Ibbu extends JsonSupport {
     implicit val timeout = Timeout(20 seconds)
 
     val helloActor = system.actorOf(Props(new HelloActor("Rashid")), "HelloActor")
+    val irashid = system.actorOf(Props[IRashid], "iRashid")
 
     val route =
       path("hello") {
@@ -39,6 +40,17 @@ object Ibbu extends JsonSupport {
     path("json") {
       get {
         complete(Rash1("Saba", 22))
+      }
+    } ~
+    pathPrefix("customers") {
+      post {
+        (entity(as[Rash1])) { rash1 =>
+          onSuccess(irashid ? rash1) {
+            case msg :String => complete(Rash3(msg, true))
+            case _ => complete(StatusCodes.InternalServerError)
+          }
+
+        }
       }
     }
 

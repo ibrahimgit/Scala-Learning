@@ -6,6 +6,7 @@ import akka.actor.Actor
 
 case class Rash1(name :String, age: Int)
 case class Rash2(name :String, dob: Date)
+case class Rash3(msg: String, status: Boolean)
 
 class IRashid extends Actor {
 
@@ -15,8 +16,9 @@ class IRashid extends Actor {
 
   }
 
+
   def doNothing(rash: Rash2): Unit = {
-    println("Message recieved from sender: " + sender.path.name)
+    println("Message received from sender: " + sender.path.name)
     println(s"Name is ${rash.name} and date of birth is ${rash.dob}")
     sender() ! s"greeting back from ${rash.name}"
   }

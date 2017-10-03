@@ -3,6 +3,7 @@ package com.ir.poc.akka
 import java.util.Calendar
 
 import akka.actor.{Actor, Props}
+import com.ir.poc.akka.model.{Rash1, Rash2}
 
 class HelloActor(greeting: String) extends Actor {
 

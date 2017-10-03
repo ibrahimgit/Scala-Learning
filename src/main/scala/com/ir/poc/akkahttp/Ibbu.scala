@@ -10,7 +10,8 @@ import akka.http.scaladsl.Http
 import akka.pattern._
 import akka.http.scaladsl.server.Directives._
 import akka.util.Timeout
-import com.ir.poc.akka.{HelloActor, IRashid, Rash1, Rash3}
+import com.ir.poc.akka.model.{Rash1, Rash3}
+import com.ir.poc.akka.{HelloActor, IRashid}
 
 object Ibbu extends JsonSupport {
 
@@ -46,7 +47,7 @@ object Ibbu extends JsonSupport {
       post {
         (entity(as[Rash1])) { rash1 =>
           onSuccess(irashid ? rash1) {
-            case msg :String => complete(Rash3(msg, true))
+            case msg :String => complete(Rash3(msg, true, 23))
             case _ => complete(StatusCodes.InternalServerError)
           }
 

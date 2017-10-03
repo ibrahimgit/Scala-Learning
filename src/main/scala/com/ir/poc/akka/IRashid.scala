@@ -3,10 +3,8 @@ package com.ir.poc.akka
 import java.util.Date
 
 import akka.actor.Actor
+import com.ir.poc.akka.model.{Rash1, Rash2}
 
-case class Rash1(name :String, age: Int)
-case class Rash2(name :String, dob: Date)
-case class Rash3(msg: String, status: Boolean)
 
 class IRashid extends Actor {
 

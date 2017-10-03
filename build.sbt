@@ -8,10 +8,16 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
 
 //libraryDependencies += "com.typesafe.akka" % "akka-actor" % "2.0.2"
 
-libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-http" % "10.0.10",
-  "com.typesafe.akka" %% "akka-http-spray-json" % "10.0.10",
-  "com.typesafe.akka" %% "akka-actor" % "2.5.4",
-  "com.typesafe.akka" %% "akka-stream" % "2.5.4"
-)
+libraryDependencies ++= {
+  val akkhttpVersion = "10.0.10"
+  val sprayJsonVersion = "10.0.10"
+  val akkaVerson = "2.5.4"
+  Seq(
+    "com.typesafe.akka" %% "akka-http" % akkhttpVersion,
+    "com.typesafe.akka" %% "akka-http-spray-json" % sprayJsonVersion,
+    "com.typesafe.akka" %% "akka-actor" % akkaVerson,
+    "com.typesafe.akka" %% "akka-stream" % akkaVerson
+  )
+}
+
 

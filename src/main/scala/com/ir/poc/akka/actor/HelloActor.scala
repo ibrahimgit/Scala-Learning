@@ -1,4 +1,4 @@
-package com.ir.poc.akka
+package com.ir.poc.akka.actor
 
 import java.util.Calendar
 
@@ -7,7 +7,7 @@ import com.ir.poc.akka.model.{Rash1, Rash2}
 
 class HelloActor(greeting: String) extends Actor {
 
-  val irashid = context.actorOf(Props[IRashid], "Rashid")
+  val irashid = context.actorOf(Props[IRashidActor], "Rashid")
 
   override def receive = {
     case "hello" => println(s"Hello $greeting");println("sender: " + sender())

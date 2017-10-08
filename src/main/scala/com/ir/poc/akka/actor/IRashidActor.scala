@@ -1,12 +1,10 @@
-package com.ir.poc.akka
-
-import java.util.Date
+package com.ir.poc.akka.actor
 
 import akka.actor.Actor
 import com.ir.poc.akka.model.{Rash1, Rash2}
 
 
-class IRashid extends Actor {
+class IRashidActor extends Actor {
 
   override def receive: Receive = {
     case rash1: Rash1 => doStuff(rash1)

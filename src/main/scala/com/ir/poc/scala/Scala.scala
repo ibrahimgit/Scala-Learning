@@ -44,6 +44,7 @@ object Scala {
     callme("hello", value)
 
     val poc = new Rashid(65, "Saba")
+
     poc.doStuff(3, "Rashid")
     printme
 
@@ -115,6 +116,21 @@ object Scala {
     println(tst.strr)
     println(tst.aa())
     test();
+    //val ib = new Ibrahim()
+    //println(ib.x) //not working for reasons
+    //println(ib.value) //not working for reasons
+
+    val ib1 = new Ibrahim(3)
+    //println(ib1.x) //not working for reasons
+
+    val ib2 = new Ibrahim(4, "message")
+    //println(ib2.msg) //not working for reasons
+
+    val ib3 = new Ibrahim(4, "ds", 0.9)
+
+
+
+
 
   }
 

@@ -8,8 +8,8 @@ import com.ir.poc.akka.actor.HelloActor
 object AkkaTest extends App {
 
   //override def main(args: Array[String]): Unit = {
-    val system = ActorSystem("Saba")
-    val helloActor = system.actorOf(Props(new HelloActor("Saba")))
+    val system = ActorSystem("Rashid")
+    val helloActor = system.actorOf(Props(new HelloActor("Rashid")))
     helloActor ! "hello"
     val future = helloActor ! "rash1"
     helloActor ! "rash2"

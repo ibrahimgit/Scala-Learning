@@ -26,7 +26,7 @@ class HelloActor(greeting: String) extends Actor {
   }
 
   def callRash1(): Unit = {
-    irashid ! new Rash1("Saba", 23)
+    irashid ! new Rash1("Rashid", 23)
     println("sender: " + sender.path.name)
   }
 

@@ -19,7 +19,7 @@ trait AkkaRouter extends JsonSupport with AkkaConfig {
     } ~
       path("test") {
         get {
-          onSuccess(helloActor ? "Saba") {
+          onSuccess(helloActor ? "Rashid") {
             case msg: String => complete(StatusCodes.OK, msg)
             case _ => complete(StatusCodes.InternalServerError)
           }
@@ -27,8 +27,8 @@ trait AkkaRouter extends JsonSupport with AkkaConfig {
       } ~
       path("json") {
         get {
-          //complete(Rash1("Saba", 22))
-          complete(Rash3("Saba", true, 23))
+          //complete(Rash1("Rashid", 22))
+          complete(Rash3("Rashid", true, 23))
         }
       } ~
       pathPrefix("customers") {

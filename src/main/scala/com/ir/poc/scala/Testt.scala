@@ -1,6 +1,6 @@
 package com.ir.poc.scala
 
-class Nobo(var y: String) /*extends Shahina(abc)*/ {
+class Testt(var y: String) {
 
   var yy = y
 

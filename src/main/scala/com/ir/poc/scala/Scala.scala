@@ -1,6 +1,5 @@
 package com.ir.poc.scala
 
-import com.ir.poc.testt.Test
 
 import scala.Array._
 object Scala {
@@ -36,23 +35,23 @@ object Scala {
     }
 
 
-    println("Hello Saba")
+    println("Hello Rashid")
     println("Value: " + value)
     value = 8
     //sconstantValue = 17 // not possible
 
     callme("hello", value)
 
-    val poc = new Rashid(65, "Saba")
+    val poc = new Rashid(65, "Rashid")
 
     poc.doStuff(3, "Rashid")
     printme
 
-    var nno = new Shahina("dsasa")
+    var nno = new ScalaClass("dsasa")
     //nno.doSomething()
     nno.doNothing()
 
-    var no = new Nobo("fdsfds")
+    var no = new Testt("fdsfds")
     no.doSomething()
 
     println("Factoral of " + value + " is " + factorial(value))
@@ -73,7 +72,7 @@ object Scala {
     println(f(10, 8))
 
     var list0 = List(0, 4, 5)
-    var list1 = List("Ibrahim", "Saba", "Rashid")
+    var list1 = List("Ibrahim", "Rashid", "Rashid")
     var list2 = 1 :: 2 :: 4 :: 5 :: Nil
     var list3 = list2 :: list0
     for (item <- list3)
@@ -84,11 +83,11 @@ object Scala {
       println(item)
 
 
-    println(f1("Saba"))
+    println(f1("Rashid"))
     println(range(5))
     println(double(5))
     println(area(5))
-    println(testingCase("Saba"))
+    println(testingCase("Rashid"))
     testhigherorderfunction(double, 5)
     testhigherorderfunction1(addTwoValues, 5, 10)
 
@@ -97,7 +96,7 @@ object Scala {
     println(fn.apply(100))
 
 
-    var emp1 = new Employee("Saba", 27)
+    var emp1 = new Employee("Rashid", 27)
     var emp2 = new Employee("Rashid", 31)
 
     val empList = List(emp1, emp2);
@@ -109,12 +108,12 @@ object Scala {
     println(empList.size + " " + empList.toString())
     listformap
 
-    val c1 = new CaseClass("Saba", 25, true)
+    val c1 = new CaseClass("Rashid", 25, true)
 
-    val tst = new Test("fdsd", 12);
+    val tst = new Testt("fdsd")
 
-    println(tst.strr)
-    println(tst.aa())
+    //println(tst.strr)
+    //println(tst.aa())
     test();
     //val ib = new Ibrahim()
     //println(ib.x) //not working for reasons
@@ -212,9 +211,9 @@ object Scala {
 
   def testingCase(text : String)  :String = {
     text match {
-        case "Saba" => "Love"
-        case "Nobo" => "Forget"
-        case "Shahina" => "Memory"
+        case "Rashid" => "Work"
+        case "Rose" => "Red"
+        case "Past" => "Memory"
     }
   }
 

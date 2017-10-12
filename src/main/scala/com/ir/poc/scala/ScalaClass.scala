@@ -1,6 +1,6 @@
 package com.ir.poc.scala
 
-class Shahina (abc :String) {
+class ScalaClass(abc :String) {
 
   var str :String = abc
 

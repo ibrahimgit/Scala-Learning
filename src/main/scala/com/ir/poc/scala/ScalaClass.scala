@@ -9,3 +9,11 @@ class ScalaClass(abc :String) {
   }
 
 }
+
+object ScalaClass { // this is called companion object
+  def apply(abc: String): ScalaClass = new ScalaClass(abc)
+}
+
+object SingletonClass {
+  //def apply: SingletonClass = new SingletonClass()
+}

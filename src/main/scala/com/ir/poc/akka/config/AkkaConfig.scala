@@ -11,7 +11,7 @@ trait AkkaConfig {
 
   implicit val system = ActorSystem("Ibbu")
   implicit val materializer = ActorMaterializer()
-  implicit val executionContext = system.dispatcher
+  //implicit val executionContext = system.dispatcher // This is required while shutting down the server
   implicit val timeout = Timeout(20 seconds)
 
   val helloActor = system.actorOf(Props(new HelloActor("Rashid")), "HelloActor")

@@ -1,8 +1,8 @@
 package com.ir.poc.scala
 
-class Testt(var y: String) {
+object Testt/*(var y: String)*/ {
 
-  var yy = y
+  var yy = 10;
 
   def doSomething(): Unit = {
     println(" String: " + yy, " String: " + yy)

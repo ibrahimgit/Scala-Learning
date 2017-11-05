@@ -11,7 +11,7 @@ object Scala {
     var value2 = 88
     var doubleVal = 2.0
     //strVal = ""
-    val str :String = "gjgjh"
+    var str :String = "gjgjh"
 
     val array1 = Array(1, 2, 3)
     val array2 = Array(3, 4, 5)
@@ -47,12 +47,12 @@ object Scala {
     poc.doStuff(3, "Rashid")
     printme
 
-    var nno = new ScalaClass("dsasa")
+    var nno = ScalaClass("dsasa") //creating an instance of ScalaClass using companion object
     //nno.doSomething()
     nno.doNothing()
 
-    var no = new Testt("fdsfds")
-    no.doSomething()
+    //var no = new Testt("fdsfds") //Testt is no more a class, it is now an object, so no use of new
+    Testt.doSomething()
 
     println("Factoral of " + value + " is " + factorial(value))
 
@@ -66,9 +66,13 @@ object Scala {
 
     callByValue(addTwoValues(4, 10))
 
+    //var c1 = "test string"
+
+    //c1 = "gfghf";
+
     var c = printme
 
-    var f = (x : Int , y : Int) => x+y
+    val f = (x : Int , y : Int) => x+y //functional literals are function values which are object basically
     println(f(10, 8))
 
     var list0 = List(0, 4, 5)
@@ -81,6 +85,29 @@ object Scala {
     list3 = list2.::(list0)
     for(item <- list3)
       println(item)
+
+
+    val strList = List("sda", "dsad", "dasds", "sads")
+    var sum = 0
+    strList.map(str => sum += str.length)
+
+    println(s"Sum of cars ${sum}")
+
+    val result = strList.fold("") {(z, i) => {
+      z+i
+    }}
+
+    println("Fold test: " + result)
+    val strList1 = List("sda", "dsad", "dasds", "sads")
+    val resultt = strList1.foldLeft(0) {(sum, string) => sum + string.length} // don't know what is the problem here, hence commenting out.
+
+    println("Fold test sum: " + resultt)
+
+
+    //val testCaseClass = TestCaseClass(10, "")
+
+
+
 
 
     println(f1("Rashid"))
@@ -108,9 +135,9 @@ object Scala {
     println(empList.size + " " + empList.toString())
     listformap
 
-    val c1 = new CaseClass("Rashid", 25, true)
+    val c1 = CaseClass("Rashid", 25, true)
 
-    val tst = new Testt("fdsd")
+    val tst = Testt.yy
 
     //println(tst.strr)
     //println(tst.aa())

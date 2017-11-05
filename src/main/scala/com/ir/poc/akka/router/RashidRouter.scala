@@ -14,6 +14,11 @@ trait RashidRouter extends JsonSupport {
       }
     } ~
     path("service") {
+      path("service1") {
+        get {
+          complete(StatusCodes.OK, "Testing service service1")
+        }
+      } ~
       get {
         complete(RashidServiceImpl.doSomething("Rashid"))
       }
@@ -37,7 +42,7 @@ trait RashidRouter extends JsonSupport {
         }
       }
     } ~
-    pathPrefix("path11"/"path22") {
+    pathPrefix("path11"/"path22") { //path11/path22/**/*
       get {
         complete(StatusCodes.OK, "Testing path prefix")
       }

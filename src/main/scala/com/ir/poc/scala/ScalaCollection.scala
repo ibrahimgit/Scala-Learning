@@ -11,8 +11,28 @@ object ScalaCollection extends App {
   //println(s"List3 is flattened - ${list3.flatten}")
   //println(s"List3 is flattened - ${list3.flatMap(x => x.map(_*2))}")
   println(s"List3 is ${list3}")
+  val seqq = Seq(1,2,3)
+  println(s"List item: ${list1(2)}")//println(list1._1) - compilation error
+  println(s"Seqq : ${seqq(2)}") //println(seqq._2)
+  println(s"List head: ${list1.head}")
+  println(s"List Tail: ${list1.tail}")
+  val str = """Saba
+    | Paraveen
+    | Saba
+    | Paraveen
+    | Saba
+    | Saba
+  """.stripMargin
+  println(s"str ${str}")
+  list1.foreach(item => println(item))
 
-  list4.map(x => println(x))
+  var emplList = List[Employee]()
+  val map1 = Map()
+  //emplList.map( employee => map1. += (employee.nm, employee.ag))
+
+
+
+
 
   println(s"List5 is ${list5}")
 

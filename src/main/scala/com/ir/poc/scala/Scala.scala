@@ -10,7 +10,6 @@ object Scala {
     val constantValue : Int = 10
     var value2 = 88
     var doubleVal = 2.0
-    //strVal = ""
     var str :String = "gjgjh"
 
     val array1 = Array(1, 2, 3)
@@ -48,8 +47,11 @@ object Scala {
     printme
 
     var nno = ScalaClass("dsasa") //creating an instance of ScalaClass using companion object
+    //companion object is used for factory method
+    //companion object is automatically created
     //nno.doSomething()
     nno.doNothing()
+    ScalaClass.foo(8) // This is equivalent to Java Static method call
 
     //var no = new Testt("fdsfds") //Testt is no more a class, it is now an object, so no use of new
     Testt.doSomething()
@@ -72,8 +74,18 @@ object Scala {
 
     var c = printme
 
+    def fsddsf(x : Int , y : Int) :Int = {
+      x+y
+    }
+
+    var vr = 0;
+
+
+
+    var x: Int = 5;
     val f = (x : Int , y : Int) => x+y //functional literals are function values which are object basically
     println(f(10, 8))
+    println(f.apply(10,8))
 
     var list0 = List(0, 4, 5)
     var list1 = List("Ibrahim", "Rashid", "Rashid")
@@ -104,7 +116,8 @@ object Scala {
     println("Fold test sum: " + resultt)
 
 
-    //val testCaseClass = TestCaseClass(10, "")
+    val testCaseClass = TestCaseClass(10, "")
+    //testCaseClass.
 
 
 
@@ -163,7 +176,6 @@ object Scala {
   def test(): Unit = {
     var str :String = "dadsd"
     str.map( s => println(s"Hello $s"))
-
     var intt :Int = 5
 
 

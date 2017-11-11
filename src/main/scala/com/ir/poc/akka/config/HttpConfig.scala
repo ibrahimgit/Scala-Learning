@@ -6,9 +6,9 @@ trait HttpConfig {
 
   private val config: Config = ConfigFactory.load()
 
-  private val httpConfig: Config = config.getConfig("http")
-  val host = httpConfig.getString("interface")
-  val port = httpConfig.getInt("port")
+ // private val httpConfig: Config = config.getConfig("http")
+  val host = config.getString("http.interface")
+  val port = config.getInt("http.port")
 
 
 }

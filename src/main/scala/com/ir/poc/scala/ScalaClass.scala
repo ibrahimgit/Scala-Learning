@@ -12,8 +12,11 @@ class ScalaClass(abc :String) {
 
 object ScalaClass { // this is called companion object
   def apply(abc: String): ScalaClass = new ScalaClass(abc)
+  def foo(abc: Int) = {
+    println(s"Inside companion object ${abc}")
+  }
 }
 
 object SingletonClass {
-  //def apply: SingletonClass = new SingletonClass()
+  //def apply: SingletonClass = new ScalaClass(abc) // compilation error
 }
